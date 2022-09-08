@@ -17,8 +17,9 @@ Find the character .uasset file in the Fmodel, right click on t and select "Expo
 ![image](https://user-images.githubusercontent.com/6393266/189229856-ce6cba60-7035-472c-a155-69326ec56e58.png)
 After that, open the image in the Umodel editor, making sure the right engine version is selected:
 <img src="https://user-images.githubusercontent.com/6393266/189230187-6f0ab11c-f653-4efc-91d9-56ffe3aad157.png" width="50%" height="50%">
+
 After that export the image. Make sure you are exporting as .dds - the checkbox is selected:
-![image](https://user-images.githubusercontent.com/6393266/189230523-22fa18cb-9a28-4094-a47c-9e37fb0df2fd.png)
+<img src="https://user-images.githubusercontent.com/6393266/189230523-22fa18cb-9a28-4094-a47c-9e37fb0df2fd.png" width="50%" height="50%">
 Ok, you are done for now, you can make any changes as you see fit using GIMP or other editor that can work with DDS files.
 
 ## Creating final DDS file
