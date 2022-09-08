@@ -1,4 +1,4 @@
-# F1Manager 2022 Images Modding Guide
+# F1Manager 2022 Texture Modding Guide
 This is a guide to making changes to the texutres in the F1 Manager 2022 game.
 
 ## Requirements
