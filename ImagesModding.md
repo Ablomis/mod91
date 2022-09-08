@@ -42,4 +42,7 @@ That's it! Now you can repack the .uasset and .uexp files to the pak and enjoy t
 
 ## Credits
 @carefreeduck for helping with the process.
-robhal from modderbase.com for the tutorials that were used as the baseline.
+
+robhal from modderbase.com for the tutorials that were used as the baseline:
+- http://modderbase.com/showthread.php?tid=1448
+- http://modderbase.com/showthread.php?tid=57
