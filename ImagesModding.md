@@ -5,7 +5,7 @@ This is a guide to making changes to the texutres in the F1 Manager 2022 game.
 - Fmodel: Easily check contents of game files: https://github.com/4sval/FModel/releases
 - UE Viewer: Show and extract resources (3D models, textures etc.) from game filesЖ https://www.gildor.org/en/projects/umodel
 - Gimp: A free PhotoShop alternative for editing DDS files used by the game: https://www.gimp.org/downloads/
-- Hex Editor when injecting back to Uasset: https://hhdsoftwaredocs.online/
+- Unreal Engine 4.27 (install it from the EPIC launcher)
 
 ## Preparing Modding Files
 Follow Unpacking guide found [here](https://github.com/carefreeduck/F1ManagerModding/blob/main/Packing.md).
@@ -24,23 +24,17 @@ After that export the image. Make sure you are exporting as .dds - the checkbox 
 Ok, you are done for now, you can make any changes as you see fit using GIMP or other editor that can work with DDS files.
 
 ## Creating final DDS file
-Whether you are editing an existing image o a new one make sure it is exported with BC3/DXT5 compression and "No mipmaps" selectd.
+Whether you are editing an existing image o a new one make sure it is exported with **no compression** (8888 BRGA). Add mip maps if necessary. As a rule of thumb - mip maps are needed for images that will be used as textures for 3D models.
 
 ## Replacing the asset
-Now open your new DDS file in the hex editor and copy all data from offset 80 till the end. Take notice of the total size in the Information panel on the right side. In our case it is 409,600.
-![image](https://user-images.githubusercontent.com/6393266/189231320-603986e7-5987-455b-8b27-381bcf783b37.png)
-Now open the .uexp file that was exported from the .umodel (it is exported together with the .uasset file) in the hex editor as well. You will replace the original image data with the new data.
-You need to be very precise now:
-1) Go to the very bottom.
-2) Don't touch the last 28 bytes - they are not a part of the image.
-3) start selecting everything from before then
- ![image](https://user-images.githubusercontent.com/6393266/189232063-57b727e9-0d57-4124-9cf9-f5a07fcb0b87.png)
-4) and go up untill the Total size in the information window is the same: 409,600
-![image](https://user-images.githubusercontent.com/6393266/189232255-ff76d287-d5aa-40ca-8106-74f7fffde289.png)
-5) Now replace the existing data with the copied data from the new image.
-6) Save the .uexp file.
+Go to the Unreal editor and create a folder for your texture in the content folder. Then drag your .DDS texture there.
+Make sure the name of the texture is **identical** to the .uasset file.
+![image](https://user-images.githubusercontent.com/6393266/189735622-5d2287b4-ca0a-4730-869a-931474c848c2.png)
+Go File-> Save All
+Then File-> Cook content for Windows
+The output files will be in the "Unreal Projects\MyProject\Saved\Cooked\WindowsNoEditor\MyProject\Content" directory
 
-That's it! Now you can repack the .uasset and .uexp files to the pak and enjoy the updated texture in game.
+That's it! Now you can repack the cooked .uasset and .uexp files to the pak and enjoy the updated texture in game.
 
 ## Credits
 @carefreeduck for helping with the process.
