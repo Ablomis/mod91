@@ -18,7 +18,7 @@ Where "f:\XXX" is the path to your working directory and the "toPack" folder is 
 2. Find your UnrealPack.exe and drag and drop it to the cmd
 3. Now add "F:\XXX\pakchunk0-WindowsNoEditor_1_P.pak" where XXX is the path to your working directory
 4. Now add "-Create=" and drag and drop the txt file we created earlier
-5.You should have a string similar to this: C:\Users\Ablomis>D:\UE_4.27\Engine\Binaries\Win64\UnrealPak.exe F:\Workspace\mod91\pakchunk0-WindowsNoEditor_1_P.pak -Create=F:\Workspace\mod91\_path.txt
+5.You should have a string similar to this: D:\UE_4.27\Engine\Binaries\Win64\UnrealPak.exe F:\Workspace\mod91\pakchunk0-WindowsNoEditor_1_P.pak -Create=F:\Workspace\mod91\_path.txt
 6. Hit enter
 
 Congratulations, your are done. Now copy the pakchunk0-WindowsNoEditor_1_P.pak from the working directory to the game pack directory and enjoy your mod.
