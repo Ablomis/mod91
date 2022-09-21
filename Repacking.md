@@ -10,7 +10,7 @@ Copy edited assets into the toPack folder, making sure the folder structure is t
 "F1Manager22/Content/Characters/Drivers/ValtteriBottas/Textures/T_F1_Driver_ValtteriBottas_Hair_Alpha.uasset"
 No in your working directory create a txt file with the name "_path.txt"
 The content of the _file_ should be:
-"f:\XXX\toPack\ *" "../../../"
+"f:\XXX\toPack\ *" "../../../" (No space needed between \ and *)
 Where "f:\XXX" is the path to your working directory and the "toPack" folder is the one we created earlier.
 
 ## Packing the assets
