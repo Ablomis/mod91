@@ -1,0 +1,51 @@
+# And guide on how to change starting calendar and initial car performance
+
+## Objective of this guide
+
+Objective of this guide is to show a solution to two fairly complicated problems of F1 Manager 2022 Modding
+
+## What this guide WILL NOT cover
+
+1. Basics like how to unpack and pack things
+2. How to use DB Browser, i.e. how to import data. 
+
+## Pre-requisites
+
+1. Modified FModel: https://drive.google.com/file/d/1s9QZz_T6hHqueRX35UOBf7MhhIuK83m5/view?usp=sharing
+2. AssetEditor: https://github.com/kaiheilos/Utilities
+3. DB Browser for SQLite: https://sqlitebrowser.org/
+4. Basic understanding of SQL (or ability to figure it out)
+5. Knowledge of how to unpack and pack resources into paks (covered by many other guides)
+
+## Baseline
+
+The most important nuance about the calendar and initial car performance is that they are generated at run-time, 
+so even you you know how to edit the database, you wont be able to simple change these paramteres as there are no records to change.
+Still, we can achieve what we want with a couple of tricks.
+
+## Database packing/unpacking
+
+To get the starting game database you need to extract the Volta.db file from the pack with your prefered unpacking method.
+Make sure you are extracting the last version of the database - it is included in the _0_P.pak
+To do this make sure that this pak is IS THE ONLY file in the folder that your Fmodel is looking into.
+After that you can export/import DB from FModel with right click.
+
+Now the DB can be edited with DB Browser.
+
+## Changing calendar
+
+This is a simplier task of the two. To do this you need to:
+1. Create a new calendar in the DB for all the seasons upfront
+2. Change the DB query so that the game doesnt overwrite your calendar when you create new season
+
+### Creating new calendar
+
+1. In the database go to the Seasons table and create as many seasons as you plan to have in the mod (anywhere 10+ should be enough for sure).
+You can edit prize pool, etc - it doesnt matter for our purpose.
+
+2. Now you need to add races for each of the seasons to the Races table. You need to provide only SeasonID, TrackID and Day, 
+the rest of the values should be zeros. The calendar can be the same for each year or different - its up to you.
+
+3. Now in the pack finde the SeasonPS file, unpack it and open it with the Asset Editor.
+There edit the highlighted field to contain following query 
+
