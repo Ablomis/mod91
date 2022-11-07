@@ -7,7 +7,7 @@ This is a guide on how to change any cars in the F1 Manager 2022.
 - UE asset Editor: https://github.com/kaiheilos/Utilities
 
 ## How game manages cars
-Paath's to the various car meshes are in the F1Manager22/Content/Cars/DA_CarDataAsset.uasset file.
+Path's to the various car meshes are in the F1Manager22/Content/Cars/DA_CarDataAsset.uasset file.
 There you have a list of all teams linked to all components. For example:
 ```
         "EF1Team::McLaren": {
