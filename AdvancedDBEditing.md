@@ -26,7 +26,7 @@ Still, we can achieve what we want with a couple of tricks.
 
 ## Database packing/unpacking
 
-To get the starting game database you need to extract the Volta.db file from the pack with your prefered unpacking method.
+To get the starting game database you need to extract the Volta.uasset file from the pack with your prefered unpacking method.
 Make sure you are extracting the last version of the database - it is included in the _0_P.pak
 To do this make sure that this pak is IS THE ONLY file in the folder that your Fmodel is looking into.
 After that you can export/import DB from FModel with right click.
